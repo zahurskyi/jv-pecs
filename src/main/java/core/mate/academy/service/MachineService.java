@@ -4,7 +4,7 @@ import core.mate.academy.model.Machine;
 import java.util.List;
 
 /**
- * Add only one implementation of this service
+ * Parameterize this service and add its implementation in a separate class.
  */
 public interface MachineService {
 

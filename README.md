@@ -33,6 +33,6 @@ For example:
 
 For example: `if (type == Bulldozer.class)` - we should call the `get()` method from right implementation of MachineProducer (the one that will return `List<Bulldozer>`) and return these machines.
 
-- `fill(List<Object> machines, Object value)` - add the passed value (which can be of any Machine subtype) to the passed list
+- `fill(List<Object> machines, Object value)` - add the passed value (which can be of any Machine subtype) to the passed list `n` times (where `n` is the initial size of the list)
 
 - `startWorking()` - call `doWork` on every Machine in the list.
