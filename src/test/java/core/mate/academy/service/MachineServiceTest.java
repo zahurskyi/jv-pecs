@@ -1,9 +1,11 @@
-package core.mate.academy.model;
+package core.mate.academy.service;
 
 import static org.junit.Assert.*;
 
-import core.mate.academy.service.MachineService;
-import core.mate.academy.service.MachineServiceImpl;
+import core.mate.academy.model.Bulldozer;
+import core.mate.academy.model.Excavator;
+import core.mate.academy.model.Machine;
+import core.mate.academy.model.Track;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import java.util.ArrayList;
