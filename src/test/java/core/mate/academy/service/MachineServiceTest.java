@@ -34,9 +34,9 @@ public class MachineServiceTest {
     }
 
     @Test
-    public void getAll_trackType() {
+    public void getAll_truckType() {
         List<Machine> actual = machineService.getAll(Truck.class);
-        assertEquals("The list should contain elements of type Track",
+        assertEquals("The list should contain elements of type Truck",
                 Truck.class, actual.get(0).getClass());
     }
 
@@ -44,7 +44,7 @@ public class MachineServiceTest {
     public void fill_bulldozerValue() {
         List<Object> machines = new ArrayList<>(List.of(new Object(), new Object(), new Object()));
         machineService.fill(machines, new Bulldozer());
-        assertEquals("The list initial size should double", 6, machines.size());
+        assertEquals("The list size shouldn't change", 3, machines.size());
         assertEquals("The list should contain elements of type Bulldozer",
                 Bulldozer.class, machines.get(0).getClass());
     }
@@ -53,17 +53,17 @@ public class MachineServiceTest {
     public void fill_excavatorValue() {
         List<Object> machines = new ArrayList<>(List.of(new Object(), new Object(), new Object()));
         machineService.fill(machines, new Excavator());
-        assertEquals("The list initial size should double", 6, machines.size());
+        assertEquals("The list size shouldn't change", 3, machines.size());
         assertEquals("The list should contain elements of type Excavator",
                 Excavator.class, machines.get(0).getClass());
     }
 
     @Test
-    public void fill_trackValue() {
+    public void fill_truckValue() {
         List<Object> machines = new ArrayList<>(List.of(new Object(), new Object(), new Object()));
         machineService.fill(machines, new Truck());
-        assertEquals("The list initial size should double", 6, machines.size());
-        assertEquals("The list should contain elements of type Track",
+        assertEquals("The list size shouldn't change", 3, machines.size());
+        assertEquals("The list should contain elements of type Truck",
                 Truck.class, machines.get(0).getClass());
     }
 
@@ -89,7 +89,7 @@ public class MachineServiceTest {
      * This test will compile in case of proper solution
      */
     @Test
-    public void startWorking_tracks() {
+    public void startWorking_trucks() {
         List<Truck> trucks = List.of(new Truck());
         machineService.startWorking(trucks);
     }
