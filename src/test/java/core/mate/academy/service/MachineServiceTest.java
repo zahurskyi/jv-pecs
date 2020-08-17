@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
-import core.mate.academy.model.Track;
+import core.mate.academy.model.Truck;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import java.util.ArrayList;
@@ -35,9 +35,9 @@ public class MachineServiceTest {
 
     @Test
     public void getAll_trackType() {
-        List<Machine> actual = machineService.getAll(Track.class);
+        List<Machine> actual = machineService.getAll(Truck.class);
         assertEquals("The list should contain elements of type Track",
-                Track.class, actual.get(0).getClass());
+                Truck.class, actual.get(0).getClass());
     }
 
     @Test
@@ -61,10 +61,10 @@ public class MachineServiceTest {
     @Test
     public void fill_trackValue() {
         List<Object> machines = new ArrayList<>(List.of(new Object(), new Object(), new Object()));
-        machineService.fill(machines, new Track());
+        machineService.fill(machines, new Truck());
         assertEquals("The list initial size should double", 6, machines.size());
         assertEquals("The list should contain elements of type Track",
-                Track.class, machines.get(0).getClass());
+                Truck.class, machines.get(0).getClass());
     }
 
     /**
@@ -90,7 +90,7 @@ public class MachineServiceTest {
      */
     @Test
     public void startWorking_tracks() {
-        List<Track> tracks = List.of(new Track());
-        machineService.startWorking(tracks);
+        List<Truck> trucks = List.of(new Truck());
+        machineService.startWorking(trucks);
     }
 }
