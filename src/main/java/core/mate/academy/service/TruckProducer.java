@@ -1,7 +1,6 @@
 package core.mate.academy.service;
 
 import core.mate.academy.model.Truck;
-
 import java.util.List;
 import java.util.Random;
 
@@ -9,7 +8,6 @@ public class TruckProducer implements MachineProducer<Truck> {
     private static final int MAX_POWER = 10000;
     private static final int MAX_WHEELS = 16;
     private Random random = new Random();
-
 
     @Override
     public List<Truck> get() {
